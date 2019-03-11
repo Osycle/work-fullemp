@@ -34,8 +34,8 @@ $header-min-menu: 70px;
 
 .header-hidden{
 	//position: relative;
-	height: $header-top-height+$header-bottom-height+10px;
-	background-color: $color-3;
+	height: $header-top-height+$header-bottom-height;
+	background-color: white;
 	transition: height 0.3s ease-in-out 0.4s;
 	@media ( max-width: 991px ){
 		height: 70px;
@@ -134,11 +134,9 @@ $header-min-menu: 70px;
 			box-shadow: 0px 5px 20px -10px black;
 			padding-bottom: 0;
 		}
-		.header-under{
-			top: -60px;
-		}
 		.header-top-content{
 			height: 0;
+			transform: scaleY(0);
 			padding: 0;
 		}
 		.header-bottom{
@@ -259,9 +257,12 @@ header-link{
 			}
 			&:hover{
 				background-color: $color-1;
+
 				a{
-					color: white;
-					border-color: $color-1;
+					color: white;	
+					&:before{
+						display: none;
+					}
 				}
 				.sub-menu-1{
 					transform: none;transform: unset;
@@ -293,20 +294,19 @@ header-link{
 			transition: all 0.3s ease;
 			position: relative;
 			z-index: 2;
-			&:before, &:after{
-				@extend .claf;
-				z-index: 1;
-				height: 2px;
-				top: -15px;
-				position: absolute;
-				transform: scaleX(0);
-				transition: all 0.3s ease;
-				background-color: $color-2;
-				bottom: auto;
+			&:before{
+				@extend .clafclear;
+				height: 15px;
+				width: 1px;
+				right: -1px;
+				background-color: $color-gray-1;
 			}
-			&:after{
-				//background-color: $color-1;
-				//transition: all 0.6s ease 0.1s;
+		}
+		&:nth-last-child(1){
+			a{
+				&:before{
+					display: none;
+				}
 			}
 		}
 		&.active{
@@ -329,7 +329,7 @@ ul[class*="sub-menu"]{
 	z-index: 2;
 	background-color: white;
 	a{
-		color: $color-gray-3;
+		color: $color-gray-3 !important;
 		&:before, &:after{
 			display: none;
 		}
@@ -338,10 +338,10 @@ ul[class*="sub-menu"]{
 .sub-menu-1{
 	white-space: normal;
 	text-transform: none;
-	transform: matrix(1,0,0,1,0,7);
+	transform: matrix(1,0,0,1,-7,0);
 	transform-origin: 40% 0;
 	text-align: left;
-
+	color: #333;
 	&, li, a{
 		pointer-events: none !important;
 	}
@@ -477,7 +477,6 @@ ul[class*="sub-menu"]{
 		top: -200px;
 	}
 	.header-hidden{
-		//height: 0;
 		transition: height 0.3s ease-in-out 0.0s;
 	}
 

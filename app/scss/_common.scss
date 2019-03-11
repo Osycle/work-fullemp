@@ -18,7 +18,7 @@ $font-family-3: "sans-serif";
 $color-scroll: $color-1;
 $color-footer: #0071BC;
 
-$color-gray-1: #ededed; //#bdbdbd
+$color-gray-1: #eaeaea; //#bdbdbd
 $color-gray-2: #707070;
 $color-gray-3: #343434;
 
@@ -501,13 +501,29 @@ table {
 
 
 .hover-style-1{
-	transition: all 0.3s ease;
-	//box-shadow:  0 0 0px 0px #000;
 	&:hover{
-		//box-shadow:  0 0 25px -5px rgba(#000, 1);
+		border-color: $color-1 !important;
 	}
-	&:active{
-		box-shadow: inset 0 0 15px -5px rgba(#000, 1);
+	&:before{
+		@extend .clafclear;
+		transition: all 0.3s ease;
+		background-color: $color-1;
+		left: 0;
+		transform: scaleX(0);
+		transform-origin: 0 0;
+	}
+	&:hover{
+		&:before{
+			transform: scale(1);	
+		}
+	}
+	&.reverse{
+		&:hover{
+			border-color: $color-1 !important;
+		}
+		&:before{
+			background-color: $color-3;
+		}
 	}
 
 }
@@ -538,6 +554,8 @@ table {
 	text-align: center;	
 	text-transform: uppercase;
 	font-weight: 600;
+	border-radius: 10px;
+	overflow: hidden;
 	font-family: $font-family-1;
 	&.text-wrap{
 		white-space: wrap;
@@ -577,7 +595,6 @@ table {
 
 .btn-def, .btn-icon{
 	@extend .btn-style;
-	@extend .hover-style-1;
 	//transition: box-shadow 0.1s steps(4);
 	*{
 		color: inherit;
@@ -609,6 +626,7 @@ table {
 
 .btn-opacity{
 	@extend .btn-style;
+	
 	background-color: transparent;
 	border: 1px solid currentColor;
 	color: $color-1;
@@ -628,6 +646,7 @@ table {
 			color: $color-3;
 		}
 	}
+	@extend .hover-style-1;
 }
 
 
@@ -737,7 +756,7 @@ body{
 	//color: white;
 	//height: auto;
 	background-color: white;
-	background-image: url('../img/bg/bg-body-article.jpg');
+	//background-image: url('../img/bg/bg-body-article.jpg');
 	background-repeat: repeat-y;
 	background-position: center 0;
 	
@@ -877,10 +896,9 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	@extend .h1-style;
-	font-size: em(40, 15);
+	font-size: em(32, 15);
 	margin-bottom: 15px;
-	font-weight: 700;
+	font-weight: 800;
 	@media (max-width: 991px) {
 		font-size: em(40/1.2, 15);
 	}
@@ -962,7 +980,7 @@ main{
 		font-size: 1em;
 		//font-weight: 400;
 		position: relative;
-		line-height: 170%;
+		line-height: 150%;
 	}
 	ul:not([class]){
 		text-align: left;
