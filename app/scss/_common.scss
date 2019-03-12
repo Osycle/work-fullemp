@@ -19,7 +19,7 @@ $color-scroll: $color-1;
 $color-footer: #0071BC;
 
 $color-gray-1: #eaeaea; //#bdbdbd
-$color-gray-2: #707070;
+$color-gray-2: #d8d8d8;
 $color-gray-3: #343434;
 
 
@@ -595,7 +595,7 @@ table {
 
 .btn-def, .btn-icon{
 	@extend .btn-style;
-	//transition: box-shadow 0.1s steps(4);
+	transition: all 0.2s ease;
 	*{
 		color: inherit;
 	}
@@ -604,10 +604,10 @@ table {
 		//color: black;
 	}
 	&:not([class*="bg-color"]){
-		background-color: $color-1;
+		background-color: $color-2;
 	}	
 	&:not(.changecolor-none):hover{
-		background-color: $color-2;
+		background-color: $color-1;
 	}
 	&.radius{
 		border-radius: 20px;
