@@ -7078,14 +7078,15 @@ html {
 */
 .breadcrumb {
   background: transparent;
-  padding: 8px 0; }
+  padding: 8px 0;
+  font-size: 0.9em; }
   .breadcrumb a:hover, .breadcrumb a a:hover, .breadcrumb .active a:hover {
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
     text-decoration: none; }
   .breadcrumb a {
-    color: #82bf2d; }
+    color: #035aa1; }
   .breadcrumb .active a {
     color: black; }
   .breadcrumb > li + li:before {
@@ -8346,12 +8347,17 @@ header-link {
     white-space: nowrap;
     height: 100%; }
   .menu ul:not([class*="sub-menu"]) {
-    height: 100%;
-    text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase; }
     .menu ul:not([class*="sub-menu"]) > li {
       height: 100%;
       display: inline-block;
@@ -8417,7 +8423,7 @@ header-link {
         height: 15px;
         width: 1px;
         right: -1px;
-        background-color: #eaeaea; }
+        background-color: #d8d8d8; }
     .menu li:nth-last-child(1) a:before {
       display: none; }
     .menu li.active {
@@ -9592,7 +9598,10 @@ figcaption {
   background-size: cover; }
 
 .works-article-content .img {
-  height: 250px; }
+  height: 250px;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover; }
 
 .country-items li {
   border: 1px solid rgba(234, 234, 234, 0.5);
@@ -9610,6 +9619,66 @@ figcaption {
 .country-items a {
   padding: 12px 15px;
   display: block; }
+
+.works-items .img {
+  height: 185px;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover; }
+
+.partners-items .img {
+  background-position: center;
+  -webkit-background-size: auto auto;
+  background-size: auto;
+  height: 145px; }
+
+.partners-items .desc-content {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transition: all 0.3s ease 0;
+  -o-transition: all 0.3s ease 0;
+  transition: all 0.3s ease 0;
+  height: 0;
+  z-index: 1;
+  -webkit-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+  background-color: white;
+  border: 1px solid #eaeaea;
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  padding: 15px 15px;
+  border-top: 0; }
+
+.partners-items .wrapper {
+  background-color: white;
+  border: 1px solid #eaeaea;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  position: relative; }
+
+.partners-items figure {
+  position: relative; }
+  .partners-items figure:hover {
+    z-index: 1; }
+    .partners-items figure:hover .wrapper {
+      -webkit-border-radius: 15px 15px 0 0;
+      border-radius: 15px 15px 0 0; }
+    .partners-items figure:hover .desc-content {
+      opacity: 1;
+      height: auto; }
+
+@media (max-width: 991px) {
+  .partners-items .desc-content {
+    position: relative;
+    height: auto;
+    width: 100%;
+    left: 0;
+    opacity: 1; } }
 
 /* 
 		_footer.scss
@@ -9971,7 +10040,7 @@ html .fancybox-show-thumbs .fancybox-thumbs {
   .carousel-article .carousel-cell {
     width: 100%;
     height: auto;
-    margin-right: 10px; }
+    margin-right: 25px; }
   .carousel-article img {
     width: 100%; }
   .carousel-article .carousel-main .flickity-viewport {
@@ -9984,7 +10053,6 @@ html .fancybox-show-thumbs .fancybox-thumbs {
     .carousel-article .carousel-nav .carousel-cell {
       width: 30%;
       height: auto;
-      margin-right: 10px;
       border: 2px solid transparent;
       -webkit-transition: all 0.3s ease-out;
       -o-transition: all 0.3s ease-out;
@@ -9992,10 +10060,7 @@ html .fancybox-show-thumbs .fancybox-thumbs {
       .carousel-article .carousel-nav .carousel-cell .img-content {
         -webkit-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
-        transition: all 0.3s ease-out;
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8); }
+        transition: all 0.3s ease-out; }
     .carousel-article .carousel-nav .is-selected {
       border-color: #3f81b7; }
       .carousel-article .carousel-nav .is-selected .img-content {
@@ -10016,7 +10081,6 @@ html .fancybox-show-thumbs .fancybox-thumbs {
 .carousel-stand .carousel-cell {
   width: 100%;
   height: 200px;
-  margin-right: 10px;
   background: #8C8;
   -webkit-border-radius: 5px;
   border-radius: 5px;

@@ -235,9 +235,12 @@ header-link{
 		height: 100%;
 	}
 	ul:not([class*="sub-menu"]){
+		display: flex;
+	  justify-content: space-between;
+		width: 100%;
+		
 		height: 100%;
 		text-transform: uppercase;
-	  justify-content: space-between;
 		@extend .letter-none;
 		& > li{
 			height: 100%;
@@ -299,7 +302,7 @@ header-link{
 				height: 15px;
 				width: 1px;
 				right: -1px;
-				background-color: $color-gray-1;
+				background-color: $color-gray-2;
 			}
 		}
 		&:nth-last-child(1){

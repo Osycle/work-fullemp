@@ -915,6 +915,8 @@ figcaption{
 .works-article-content{
 	.img{
 		height: 250px;
+		background-position: center;
+		background-size: cover;
 	}
 }
 .country-items{
@@ -932,5 +934,72 @@ figcaption{
 	a{
 		padding: 12px 15px;
 		display: block;
+	}
+}
+
+
+
+
+
+//works
+.works-items{
+	.img{
+		height: 185px;
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+//partners
+.partners{
+}
+.partners-items{
+	.img{
+		background-position: center;
+		background-size: auto;
+		height: 145px;
+	}
+	.desc-content{
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		transition: all 0.3s ease 0;
+		height: 0;
+		z-index: 1;
+		border-radius:  0 0 15px 15px;
+		background-color: white;
+		border: 1px solid $color-gray-1;
+		transform: translateY(-10px);
+		padding: 15px 15px;
+		border-top: 0;
+	}
+	.wrapper{
+		background-color: white;
+		border: 1px solid $color-gray-1;
+		transition: all 0.3s ease;
+		border-radius: 15px;
+		position: relative;
+	}
+	figure{
+		position: relative;
+		&:hover{
+			z-index: 1;
+			.wrapper{
+				border-radius: 15px 15px 0 0;
+			}
+			.desc-content{
+				opacity: 1;
+				height: auto;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		.desc-content{
+			position: relative;
+			height: auto;
+			width: 100%;
+			left: 0;
+			opacity: 1;
+		}
 	}
 }
