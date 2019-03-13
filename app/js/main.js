@@ -250,27 +250,6 @@
 		
 
 	    
-	    //short-info-carousel
-	      // $('.short-info-carousel .carousel-items').flickity({
-	      //   imagesLoaded: true,
-	      //   autoPlay: 3000,
-	      //   //groupCells: 3,
-	      //   freeScroll: false,
-	      //   pauseAutoPlayOnHover: true,
-	      //   arrowShape: arrowStyle,
-	      //   initialIndex: 0,
-	      //   prevNextButtons: true,
-	      //   draggable: false,
-	      //   //adaptiveHeight: false, 
-	      //   wrapAround: false,
-	      //   pageDots: false,
-	      //   contain: true,
-	      //   cellAlign: 'center',
-	      //   percentPosition: true
-	      // });
-
-    	
-
 
 
 
@@ -300,7 +279,7 @@
 						imagesLoaded: true,
 						initialIndex: 1,
 						asNavFor: $(carouselMain)[i],
-						prevNextButtons: true,
+						prevNextButtons: false,
 						draggable: true,
 						percentPosition: true,
 						//wrapAround: true,

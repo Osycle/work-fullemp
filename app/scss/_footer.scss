@@ -16,7 +16,7 @@
 	background-repeat: repeat;
 	background-position-y: top;
 	//background-size: cover;
-	background-color: #2a2a2a;
+	background-color: white;
 	//background-image: url('../img/bg/bg-footer.jpg');
 	&:before{
 		font-size: 150px;
@@ -32,7 +32,7 @@
 	padding-top: 30px;
 	padding-bottom: 30px;
 	.container{
-		border-bottom: 3px solid white;
+		border-bottom: 2px solid $color-gray-1;
 		padding-bottom: 30px;
 
 	}
@@ -87,8 +87,8 @@
 		transition: all 0.3s ease;
 		text-align: center;
 		margin-left: 5px;
-		border: 1px solid $color-gray-2;
-		color: $color-gray-2;
+		border: 1px solid $color-2;
+		color: $color-2;
 		border-radius: 50%;
 		width: 35px;
 		height: 35px;
@@ -104,10 +104,11 @@
 			}
 		}
 		&:hover{
-			border-color: $color-1;
+			border-color: $color-2;
 			color: white;
-			background-color: $color-1;
-			box-shadow: 0 0 20px 0 $color-1;
+			background-color: $color-2;
+			//box-shadow: 0 0 20px 0 $color-2;
+
 		}
 	}
 	.fa-paper-plane{
@@ -125,7 +126,6 @@
 
 
 .copy-content{
-	background-color: #2a2a2a;
 	padding-bottom: 30px;
 }
 .dev{

@@ -724,63 +724,28 @@ textarea.form-control{
 
 }
 
-#form_def{	
+#form_order, #form_feedback{	
 	@media (min-width: 992px) {
 		width: 420px;
-	}
-}
-#form_production{
-	input.feedback-control{
-		&:focus{
-			border-color: $color-1;
-		}
-	}
-	.btn-content{
-		@media (min-width: 992px) {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.btn-def{
-			button{
-				text-transform: uppercase;
-			}
-		}
-	}
-	label{
-		width: 100%;
 	}
 }
 
 .form-def{	
 	padding-right: 40px;
 	padding-left: 40px;
-
+	background-image: url('../img/bg/bg-modal-order.jpg');
+	background-repeat: no-repeat;
+	background-color: $color-2;
+	background-position: center;
+	color: white;
 	h1, h2, h3{
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-	form{
-		h4{
+	.cap-content{
+		h1{
 			text-transform: uppercase;
 		}
-	}
-	.cap-content{
-		color: white;
-		background-color: $color-1;
-    margin-left: -40px;
-    margin-right: -40px;
-    margin-top: -24px;
-    padding: 10px 15px;
-    text-align: center;
-    font-size: 1.1em;
-    h2{
-    	line-height: 170%;
-    }
-    p{
-    	width: 80%;
-    	margin: auto;
-    }
 	}
 	.fancybox-close-small{
 		top: 15px;
@@ -792,24 +757,22 @@ textarea.form-control{
     	outline: none;
     }
 	}
-	input.feedback-control{
-		border: none;
-		border-bottom: 2px solid $color-gray-1;
-		height: 35px;
-		padding-left: 0;
-		color: black;
-		background-color: white;
-		&:focus{
-			border-color: $color-4;
+	.btn-def{
+		button, a{
+			font-size: 1.1em;
+			text-transform: uppercase;
 		}
 	}
-	.input-icon{
-		overflow: hidden;
-		margin-top: 5px;
+
+	input.pie-form-control{
+		background-color: $color-gray-1;
+		@include placeholder-color( $color-gray-2 );
+		color: black;
 	}
 	textarea.pie-form-control{
 		background-color: $color-gray-1;
 	}
+
 }
 
 

@@ -5,8 +5,8 @@
 */
 
 $color-1: #82bf2d !default;
-$color-2: #035aa1 !default;
-$color-3: #2a2a2a !default;
+$color-2: #035aa1 !default;//
+$color-3: #3f81b7 !default;
 $color-4: #e00579 !default;
 $color-5: #65a328 !default;
 $color-special-1: #2e1c11;
@@ -504,14 +504,6 @@ table {
 	&:hover{
 		border-color: $color-1 !important;
 	}
-	&:before{
-		@extend .clafclear;
-		transition: all 0.3s ease;
-		background-color: $color-1;
-		left: 0;
-		transform: scaleX(0);
-		transform-origin: 0 0;
-	}
 	&:hover{
 		&:before{
 			transform: scale(1);	
@@ -554,7 +546,7 @@ table {
 	text-align: center;	
 	text-transform: uppercase;
 	font-weight: 600;
-	border-radius: 10px;
+	border-radius: 5px;
 	overflow: hidden;
 	font-family: $font-family-1;
 	&.text-wrap{
@@ -599,9 +591,8 @@ table {
 	*{
 		color: inherit;
 	}
-	color: white;
-	&:not([class*="color-"]){
-		//color: black;
+	&:not([class*="color-"]):not([class*="bg-color"]){
+		color: white;
 	}
 	&:not([class*="bg-color"]){
 		background-color: $color-2;
@@ -614,10 +605,10 @@ table {
 	}
 	&.reverse{
 		&:not([class*="bg-color"]){
-			background-color: $color-2;
+			background-color: $color-1;
 		}
 		&:not(.changecolor-none):hover{
-			background-color: $color-3;
+			background-color: $color-2;
 		}
 	}
 }
@@ -695,7 +686,7 @@ table {
 				background-color: darken($color-gray-1, 5%);
 			}
 			&.active{
-				background-color: $color-1;
+				background-color: $color-3;
 				a{
 					color: white;
 				}
@@ -1065,14 +1056,13 @@ hr{
 }
 
 .pie-form-control{
-	border: 1px solid rgba($color-1, 0.8);
+	border: 1px solid rgba($color-2, 0.8);
 	//border-bottom-color: white;
-	background-color: $color-gray-1;
 	&:not([class*='color-']){
 		color: inherit;
 		color: currentColor;
 	}
-	@include placeholder-color($color-gray-2);
+	@include placeholder-color(white);
 	&:focus, &:active{
 		outline: none;
 	}
@@ -1081,8 +1071,9 @@ hr{
 input.pie-form-control{
 	height: 50px;
 	padding: 5px 12px;
-	box-shadow: inset 1px 3px 25px -13px black;
+	background-color: white;
 	border-color: $color-gray-1;
+	border-radius: 5px;
 	&[type="checkbox"]{
 		height: auto;
 		margin-top: 0;
