@@ -8178,6 +8178,10 @@ label {
 
 .header-top-content {
   height: 100px; }
+  .header-top-content.align-i-center {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
 
 .header-top, .header-bottom {
   -webkit-transform: inherit;
@@ -8217,7 +8221,7 @@ label {
 .header-logo {
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 45%; }
+  width: 33%; }
   .header-logo img {
     display: inline-block;
     vertical-align: middle;
@@ -9516,9 +9520,13 @@ figcaption {
 
 @media (min-width: 992px) {
   .reviews-items .img-content {
-    -webkit-flex-basis: 65%;
-    -ms-flex-preferred-size: 65%;
-    flex-basis: 65%; }
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%; }
+  .reviews-items .text-content {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%; }
   .reviews-items figure:nth-child(even) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;

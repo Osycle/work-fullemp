@@ -801,7 +801,10 @@ figcaption{
 	}
 	@media (min-width: 992px) {
 		.img-content{
-			flex-basis: 65%;
+			flex-basis: 25%;
+		}
+		.text-content{
+			flex-basis: 75%;	
 		}
 		figure{
 			&:nth-child(even){

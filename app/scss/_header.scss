@@ -56,6 +56,9 @@ $header-min-menu: 70px;
 .header-top-content{
 	height: $header-top-height;
 	//overflow: hidden;
+	&.align-i-center{
+		flex-wrap: nowrap;
+	}
 }
 .header-top, .header-bottom{
 	transform: inherit;transform: unset;
@@ -89,7 +92,7 @@ $header-min-menu: 70px;
 .header-logo {
 	padding-top: 5px;
   padding-bottom: 5px; 
-  width: 45%;
+  width: 33%;
 	img{
 		display: inline-block;
 		vertical-align: middle;
