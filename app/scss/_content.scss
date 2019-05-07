@@ -1006,3 +1006,143 @@ figcaption{
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+//joblist
+.joblist-search{
+	display: flex;
+	background-color: #f9f9f9;
+	justify-content: space-between;
+	padding: 30px;
+	select{
+		min-width: 80px;
+		padding-right: 10px;
+	}
+	.field-content{
+		b{
+			white-space: nowrap;
+		}
+		input{
+			@include placeholder-color( rgba($color-gray-3, 0.8) );
+		}
+	}
+	input{
+		&[type="text"]{
+			height: 40px;
+		}
+	}
+	@media (max-width: 991px) {
+		justify-content: center;
+		flex-wrap: wrap;
+		&>div{
+			width: 100%;
+		}
+		.field-content{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			&[class*="p-"]{
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+		select{
+			margin-top: 5px;
+			margin-bottom: 5px;
+			
+		}
+	}
+}
+.joblist-table{
+	tr{
+		border: 0;
+		position: relative;
+		&:nth-child(1){
+			border-bottom: 20px solid white;
+		}
+		border-bottom: 5px solid white;
+	}
+	th{
+		background-color: #e9e9e9;
+		font-weight: normal;
+		text-transform: uppercase;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: em(14, 15);
+		text-align: center;
+		margin-top: 0;
+		border: 0;
+		&:nth-child(1){
+			width: 60%;
+		}
+		&:nth-child(2){
+			background-color: #f9f9f9;
+		}
+
+	}
+	tr td{
+		background-color: #f3f3f3;
+		border: 0;
+		&:nth-child(2){
+			font-weight: 700;
+			text-transform: uppercase;
+			background-color: #f9f9f9;
+			vertical-align: middle;
+    	text-align: center;
+		}
+	}
+	figure{
+		display: flex;
+		@media (max-width: 991px) {
+			flex-wrap: wrap;
+		}
+	}
+	h5{
+		color: $color-2;
+	}
+	.img{
+		width: 240px;
+		height: 180px;
+		background-position: center;
+		background-size: cover;
+	}
+	.color-red{
+		color: #b70b0b;
+	}
+	p{
+	margin-bottom: 8px;
+	}
+	.desc-content{
+		width: 100%;
+		.row{
+			font-size: 0.90em;
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
+
+	}
+	@media (min-width: 992px) {
+		.desc-content{
+			padding-left: 30px;
+		}
+	}
+	@media (max-width: 991px) {
+		th{
+			display: none;
+		}
+		tr{
+			display: flex;
+    	flex-wrap: wrap;
+    	td{
+    		width: 100%;
+    	}
+		}
+	}
+}
